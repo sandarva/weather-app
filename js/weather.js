@@ -7,7 +7,7 @@ import TOKEN from './config.js'
  * @param {*} city 
  * @returns the weather data of the city
  */
-const getWeather = async (city) => {
+export const getWeather = async (city) => {
     const BASE_URI = `https://api.openweathermap.org/data/2.5/`
     const query = `weather?q=${city}&appid=${TOKEN}&units=metric`
 
