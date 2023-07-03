@@ -1,3 +1,5 @@
+import { getWeather } from "./weather"
+
 // HTML ELEMENTS
 // The for to search country
 const cityForm = document.querySelector('.change-location')
