@@ -1,5 +1,5 @@
 // API KEY for OPEN WEATHER API
-const API_KEY = 'cbd5a0c6f886d2616d8262d2a8497d6d'
+import TOKEN from './config.js'
 
 /**
  * 
@@ -9,7 +9,7 @@ const API_KEY = 'cbd5a0c6f886d2616d8262d2a8497d6d'
  */
 const getWeather = async (city) => {
     const BASE_URI = `https://api.openweathermap.org/data/2.5/`
-    const query = `weather?q=${city}&appid=${API_KEY}&units=metric`
+    const query = `weather?q=${city}&appid=${TOKEN}&units=metric`
 
     const response = await fetch(`${BASE_URI}/${query}`)
     const data = await response.json()
