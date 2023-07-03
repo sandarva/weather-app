@@ -1,0 +1,20 @@
+body{
+    background: #eeedec;
+    letter-spacing: 0.2em;
+    font-size: 0.8em;
+}
+
+.container{
+    max-width: 400px;
+}
+
+.icon{
+    background-color: cadetblue;
+    position: relative;
+    transform: translateY(50%);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    top: -50px;
+    /* margin-bottom: -50px; */
+}
