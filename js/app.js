@@ -1,4 +1,5 @@
-import { getWeather } from "./weather"
+// API KEY for OPEN WEATHER API
+import TOKEN from './config.js'
 
 // HTML ELEMENTS
 // The for to search country
@@ -66,6 +67,21 @@ const updateCity = async (city) => {
         condition: data.weather[0].main,
         temperature: Math.floor(data.main.temp)
     }
+}
+
+/**
+ * 
+ * function to show the data form open weather api of a specific city
+ * @param {*} city 
+ * @returns the weather data of the city
+ */
+export const getWeather = async (city) => {
+    const BASE_URI = `https://api.openweathermap.org/data/2.5/`
+    const query = `weather?q=${city}&appid=${TOKEN}&units=metric`
+
+    const response = await fetch(`${BASE_URI}/${query}`)
+    const data = await response.json()
+    return data
 }
 
 // event listener for the form
